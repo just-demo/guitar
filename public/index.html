@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+    <title>Songs</title>
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" type="text/css" href="css/lib/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script src="js/lib/jquery-3.4.1.js"></script>
+    <script src="js/lib/jquery-ui.js"></script>
+    <script src="js/lib/easyTooltip.js"></script>
+    <script src="js/lib/autoresize.jquery.js"></script>
+    <script src="js/buildChordDiagram.js"></script>
+    <script src="js/buildSongList.js"></script>
+    <script src="js/http.js"></script>
+    <script>
+        $(document).ready(() => {
+            let timestamp = new Date().getTime();
+            buildSongList(
+                $("body"),
+                httpReadJson("data/songs.json?nocache=" + timestamp),
+                httpReadJson("data/chords.json?nocache=" + timestamp)
+            );
+        });
+    </script>
+</head>
+<body>
+    <div id="newSongButton" class="noPrint">+</div>
+    <div id="newSongDialog" title="Enter new song">
+        <form>
+            <fieldset>
+                <div>Performer</div>
+                <input type="text" name="performer">
+                <div>Title</div>
+                <input type="text" name="title">
+                <div>Text</div>
+                <textarea name="text"></textarea>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

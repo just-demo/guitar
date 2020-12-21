@@ -1,0 +1,26 @@
+.listItem {
+	width: 100%;
+}
+
+.listHeader .chordName {
+    display: inline-block;
+    width: 100px;
+    color: blue;
+}
+
+button:not(:last-child) {
+    margin-right: 3px;
+}
+
+.suppressed {
+    background-color: #DDD;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.diagram {
+    float: left;
+    margin: 10px;
+}

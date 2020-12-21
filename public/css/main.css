@@ -1,0 +1,142 @@
+body {
+	font-family: monospace;
+}
+
+.listHeader {
+	cursor: pointer;
+	padding: 5px;
+}
+
+.selected {
+	background-color: #AFA;
+}
+
+.listHeader:hover {
+	background-color: #DDD;
+}
+
+.chord{
+	cursor: pointer;
+	color: blue;
+}
+
+.listItem {
+	border: 1px solid #AAA;
+}
+
+.songText {
+	border: 1px solid #AAA;
+	display: inline-block;
+	min-width: 350px;
+}
+
+.songText, textarea {
+	font-size: 12px;
+	line-height: 17px;
+	padding: 5px;
+}
+
+textarea {
+    background-color: #F0F0F0;
+}
+
+.songActions td {
+    display: flex;
+}
+
+.songActions button:not(:last-child) {
+    margin-right: 3px;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.songChords, .songText {
+	vertical-align: top;
+}
+
+.songTitle {
+	color: blue;
+}
+
+.listBody {
+	display: none;
+}
+
+.songChords td {
+	vertical-align: top;
+	text-align: center;
+}
+
+.chord_popup {
+	border: 1px solid #AAA;
+	padding: 5px;
+	background-color: #FFF;
+}
+
+@media screen{
+	.print {
+		display: none;
+	}
+}
+
+@media print{
+	.noPrint {
+		display: none;
+	}
+}
+
+#newSongButton {
+	position:fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 100;
+	font-weight: bold;
+	font-size: 40px;
+	color: #AAAAAA;
+	border: 3px solid #AAA;
+	background-color: #F0F0F0;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	vertical-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#newSongButton:hover {
+	background-color: #DDD;
+}
+
+
+#newSongDialog {
+    display: none;
+}
+
+/*** for jquery-ui ***/
+fieldset {
+    border: 0;
+}
+
+fieldset label {
+    display: block;
+}
+
+fieldset input {
+    margin-bottom: 12px;
+    width: 95%;
+    padding: .4em;
+}
+
+fieldset textarea {
+    background-color: #FFF;
+    width: 95%;
+    height: 85px;
+}
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+/*********************/

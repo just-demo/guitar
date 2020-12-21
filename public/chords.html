@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Chords</title>
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/chords.css"/>
+    <script src="js/lib/jquery-3.4.1.js"></script>
+    <script src="js/lib/jquery-ui.js"></script>
+    <script src="js/http.js"></script>
+    <script src="js/buildChordDiagram.js"></script>
+    <script src="js/buildChordList.js"></script>
+    <script src="js/http.js"></script>
+    <script>
+        $(function() {
+            let timestamp = new Date().getTime();
+            buildChordList(
+                $("body"),
+                httpReadJson("data/chords.json?nocache=" + timestamp)
+            );
+        });
+  </script>
+</head>
+<body>
+</body>
+</html>
